@@ -80,6 +80,7 @@ CardType getCardType(String cardNumber) {
   RegExp rMasterCard =
       new RegExp(r"^(5[1-5]|222[1-9]|22[3-9]|2[3-6]|27[01]|2720)[0-9]{0,}$");
   RegExp rMaestro = new RegExp(r"^(5[06789]|6)[0-9]{0,}$");
+  RegExp mpesa = RegExp(r"^((?:[+0]7)?([+]2547)?[0-9]{8})$");
   RegExp rRupay = new RegExp(r"^(6522|6521|60)[0-9]{0,}$");
   RegExp rVisa = new RegExp(r"^4[0-9]{0,}$");
 
@@ -111,6 +112,8 @@ CardType getCardType(String cardNumber) {
     return CardType.jcb;
   } else if (rMaestro.hasMatch(cardNumber)) {
     return CardType.maestro;
+  } else if (mpesa.hasMatch(cardNumber)) {
+    return CardType.mpesa;
   }
 
   return CardType.other;
