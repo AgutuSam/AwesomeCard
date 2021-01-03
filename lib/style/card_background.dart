@@ -18,7 +18,7 @@ class CardBackgrounds {
   static Widget greenDark = new Container(
     width: double.maxFinite,
     height: double.maxFinite,
-    color: Color(0xff11e03),
+    color: Color(0xff011e03),
   );
 
   static Widget red = new Container(
