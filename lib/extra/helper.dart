@@ -45,6 +45,13 @@ Widget getCardTypeIcon({CardType cardType, String cardNumber}) {
         height: 40,
         package: 'awesome_card',
       );
+    case CardType.mpesa:
+      return Image.asset(
+        "images/card_provider/mpesa.png",
+        width: 55,
+        height: 40,
+        package: 'awesome_card',
+      );
     case CardType.rupay:
       return Image.asset(
         "images/card_provider/rupay.png",
@@ -108,5 +115,3 @@ CardType getCardType(String cardNumber) {
 
   return CardType.other;
 }
-
-

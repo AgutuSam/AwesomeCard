@@ -5,6 +5,7 @@ enum CardType {
   jcb,
   masterCard,
   maestro,
+  mpesa,
   rupay,
   visa,
   other
